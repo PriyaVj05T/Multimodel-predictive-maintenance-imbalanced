@@ -1,0 +1,56 @@
+# Data Configuration
+data:
+  source_path: "data/predictive_maintenance.csv"
+  target_column: "Target"
+  failure_type_column: "Failure Type"
+  drop_columns: ["UDI", "Product ID"]
+  
+  # Column mappings
+  column_mappings:
+    "Air temperature [K]": "Air temperature"
+    "Process temperature [K]": "Process temperature"
+    "Rotational speed [rpm]": "Rotational speed"
+    "Torque [Nm]": "Torque"
+    "Tool wear [min]": "Tool wear"
+
+# Preprocessing Configuration
+preprocessing:
+  test_size: 0.25
+  random_state: 42
+  stratified_splits: 5
+  
+  # Scaling configuration
+  robust_scaler_columns: ["Rotational speed", "Torque"]
+  minmax_scaler_columns: ["Air temperature", "Process temperature", "Tool wear"]
+  
+  # Ordinal encoding
+  type_categories: ["L", "M", "H"]
+
+# Model Configuration
+models:
+  target_prediction:
+    threshold: 0.4
+    use_tomek_links: true
+    bagging_estimators: 120
+    
+  failure_type_prediction:
+    balanced_bagging_estimators: 13
+    
+  # Ensemble models for comparison
+  ensemble_models:
+    - "BalancedRandomForestClassifier"
+    - "BalancedBaggingClassifier"
+    - "RUSBoostClassifier"
+    - "EasyEnsembleClassifier"
+
+# Artifacts Configuration
+artifacts:
+  root_dir: "artifacts"
+  data_ingestion_dir: "data_ingestion"
+  data_transformation_dir: "data_transformation"
+  model_trainer_dir: "model_trainer"
+  
+# Logging Configuration
+logging:
+  log_dir: "logs"
+  log_file: "running_logs.log"
