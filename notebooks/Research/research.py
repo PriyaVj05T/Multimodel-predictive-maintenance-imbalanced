@@ -1,26 +1,4 @@
-# Project Structure:
-# predictive_maintenance/
-# ├── config/
-# │   └── config.yaml
-# ├── src/
-# │   ├── __init__.py
-# │   ├── components/
-# │   │   ├── __init__.py
-# │   │   ├── data_ingestion.py
-# │   │   ├── data_transformation.py
-# │   │   ├── model_trainer.py
-# │   │   └── model_evaluation.py
-# │   ├── pipelines/
-# │   │   ├── __init__.py
-# │   │   ├── training_pipeline.py
-# │   │   └── prediction_pipeline.py
-# │   └── utils/
-# │       ├── __init__.py
-# │       └── common.py
-# ├── artifacts/
-# ├── logs/
-# ├── requirements.txt
-# └── main.py
+
 
 # ==============================================
 # config/config.yaml
@@ -778,43 +756,8 @@ def main():
 if __name__ == "__main__":
     main()
 
-# ==============================================
-# requirements.txt
-# ==============================================
-"""
-pandas>=1.5.0
-numpy>=1.21.0
-scikit-learn>=1.2.0
-imbalanced-learn>=0.10.0
-PyYAML>=6.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-joblib>=1.2.0
-"""
 
-# ==============================================
-# src/__init__.py
-# ==============================================
-# Empty file to make src a package
 
-# ==============================================
-# src/components/__init__.py
-# ==============================================
-# Empty file to make components a package
-
-# ==============================================
-# src/pipelines/__init__.py
-# ==============================================
-# Empty file to make pipelines a package
-
-# ==============================================
-# src/utils/__init__.py
-# ==============================================
-# Empty file to make utils a package
-
-# ==============================================
-# Usage Instructions
-# ==============================================
 """
 SETUP INSTRUCTIONS:
 

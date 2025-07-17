@@ -1,3 +1,27 @@
+# Project Structure:
+# predictive_maintenance/
+# ├── config/
+# │   └── config.yaml
+# ├── src/
+# │   ├── __init__.py
+# │   ├── components/
+# │   │   ├── __init__.py
+# │   │   ├── data_ingestion.py
+# │   │   ├── data_transformation.py
+# │   │   ├── model_trainer.py
+# │   │   └── model_evaluation.py
+# │   ├── pipelines/
+# │   │   ├── __init__.py
+# │   │   ├── training_pipeline.py
+# │   │   └── prediction_pipeline.py
+# │   └── utils/
+# │       ├── __init__.py
+# │       └── common.py
+# ├── artifacts/
+# ├── logs/
+# ├── requirements.txt
+# └── main.py
+
 SETUP INSTRUCTIONS:
 
 1. Create the directory structure:
@@ -41,3 +65,19 @@ PREDICTION:
 - Support for CSV batch processing
 - Comprehensive output with confidence scores
 - Validation of input data format
+
+# ==============================================
+# src/__init__.py
+- Empty file to make src a package
+
+# ==============================================
+# src/components/__init__.py
+-Empty file to make components a package
+
+# ==============================================
+# src/pipelines/__init__.py
+- Empty file to make pipelines a package
+
+# ==============================================
+# src/utils/__init__.py
+- Empty file to make utils a package

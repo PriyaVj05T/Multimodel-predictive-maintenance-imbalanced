@@ -1,6 +1,6 @@
 # Data Configuration
 data:
-  source_path: "data/predictive_maintenance.csv"
+  source_path: "notebooks\data\predictive_maintenance.csv"
   target_column: "Target"
   failure_type_column: "Failure Type"
   drop_columns: ["UDI", "Product ID"]
